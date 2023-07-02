@@ -99,7 +99,7 @@
             &kp ESC &kp FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T                                                                 &kp FR_Y &kp FR_U &kp FR_I &kp FR_O &kp FR_P &kp FR_CIRC
             &kp TAB &kp FR_Q &mt LALT FR_S &mt LSHIFT FR_D &mt LCTRL FR_F &kp FR_G                                               &kp FR_H &mt RCTRL FR_J &mt RSHIFT FR_K &mt LALT FR_L &kp FR_M &kp TAB
             &td_caps &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B &none &kp C_AC_COPY               &kp C_AC_PASTE &none &kp FR_N &kp FR_COMM &kp FR_SCLN &kp FR_COLN &kp FR_EXLM &kp RALT
-            &none &none &lt LOWER BSPC &mrphlt NAV 0 &kp DEL                                                                     &kp RET &mrphlt FR 0 &lt UPPER BSPC &none &none
+            &none &none &lt LOWER BSPC &mrphlt NAV 0 &lt KEYPAD DEL                                                                     &kp RET &mrphlt FR 0 &lt UPPER BSPC &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DOWN UP>;
@@ -107,14 +107,13 @@
 
         LOWER_layer {
             bindings = <
-            &kp FR_PND &none &none &none &none &none                     &none &none &none &none &none &none
-            &kp FR_EURO &none &none &none &none &none                     &none &none &none &none &none &none
-            &kp FR_DLR &none &none &none &none &none &trans &trans         &trans &trans &none &none &none &none &none &none
-            &trans &trans &trans &trans &trans                           &trans &trans &trans &trans &trans
+            &kp FR_PND &kp FR_AT &kp FR_PIPE &kp FR_MINS &kp FR_LPRN &kp FR_LABK                      &kp FR_RABK &kp FR_RPRN &kp FR_DQUO &kp FR_PLUS &kp FR_CURR &none
+            &kp FR_EURO &kp FR_HASH &kp FR_AMPR &kp FR_UNDS &kp FR_LBRC &kp FR_ASTR                   &kp FR_QUES &kp FR_RBRC &kp FR_QUOT &kp FR_MINS &kp FR_GRV &none
+            &kp FR_DLR &none &kp FR_TILD &none &kp FR_LCBR &kp FR_BSLS &trans &trans                  &trans &trans &kp FR_SLSH &kp FR_RCBR &kp FR_PERC &kp FR_EQL &kp FR_SECT &none
+            &trans &trans &trans &trans &trans                                                        &trans &trans &trans &trans &trans
             >;
 
-
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AL_PREV_TASK C_AL_NEXT_TASK &inc_dec_kp PG_UP PG_DN>;
         };
 
         UPPER_layer {
@@ -152,13 +151,13 @@
 
         KEYPAD_layer {
             bindings = <
-            &none &none &none &none &none &none                     &none &none &none &none &none &none
-            &none &none &none &none &none &none                     &none &none &none &none &none &none
-            &none &none &none &none &none &none &trans &trans         &trans &trans &none &none &none &none &none &none
-            &trans &trans &trans &trans &trans                           &trans &trans &trans &trans &trans
+            &none &none &none &none &kp FR_SLSH &kp FR_ASTR                                    &kp 7 &kp 8 &kp 9 &none &none &none
+            &none &none &none &none &kp FR_MINS &kp FR_PLUS                                     &kp 4 &kp 5 &kp 6 &none &none &none
+            &none &none &none &none &kp 0 &kp RET &trans &trans        &trans &trans &kp 1 &kp 2 &kp 3 &none &none &none
+            &trans &trans &trans &trans &trans                       &trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AL_PREV_TASK C_AL_NEXT_TASK &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
