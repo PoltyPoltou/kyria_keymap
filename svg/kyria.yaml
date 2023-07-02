@@ -1,95 +1,95 @@
 layers:
   AZERTY:
   - ESC
-  - FR A
-  - FR Z
-  - FR E
-  - FR R
-  - FR T
-  - FR Y
-  - FR U
-  - FR I
-  - FR O
-  - FR P
-  - FR CIRC
+  - A
+  - Z
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - ^
   - TAB
-  - FR Q
-  - {t: FR S, h: LALT}
-  - {t: FR D, h: LSHIFT}
-  - {t: FR F, h: LCTRL}
-  - FR G
-  - FR H
-  - {t: FR J, h: RCTRL}
-  - {t: FR K, h: RSHIFT}
-  - {t: FR L, h: LALT}
-  - FR M
+  - Q
+  - {t: S, h: LALT}
+  - {t: D, h: LSHIFT}
+  - {t: F, h: LCTRL}
+  - G
+  - H
+  - {t: J, h: RCTRL}
+  - {t: K, h: RSHIFT}
+  - {t: L, h: LALT}
+  - M
   - TAB
   - '&td_caps'
-  - FR W
-  - FR X
-  - FR C
-  - FR V
-  - FR B
+  - W
+  - X
+  - C
+  - V
+  - B
   - ''
   - AC COPY
   - AC PASTE
   - ''
-  - FR N
-  - FR COMM
-  - FR SCLN
-  - FR COLN
-  - FR EXLM
+  - N
+  - ','
+  - ;
+  - ':'
+  - '!'
   - RALT
   - ''
   - ''
   - {t: BSPC, h: LOWER}
-  - {t: SPACE, h: NAV, s: FR UNDS}
-  - DEL
-  - RET
-  - {t: SPACE, h: FR, s: FR UNDS}
+  - {t: SPACE, h: NAV, s: _}
+  - {t: DEL, h: KEYPAD}
+  - ENTER
+  - {t: SPACE, h: FR, s: _}
   - {t: BSPC, h: UPPER}
   - ''
   - ''
   LOWER:
-  - FR PND
+  - £
+  - '@'
+  - '|'
+  - '-'
+  - (
+  - <
+  - '>'
+  - )
+  - '"'
+  - +
+  - ¤
   - ''
+  - €
+  - '#'
+  - '&'
+  - _
+  - '['
+  - '*'
+  - '?'
+  - ']'
+  - ''''
+  - '-'
+  - '`'
   - ''
+  - $
   - ''
+  - '~'
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - FR EURO
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - FR DLR
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '{'
+  - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - /
+  - '}'
+  - '%'
+  - '='
+  - §
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -154,6 +154,15 @@ layers:
   - {t: ▽, type: trans}
   FR:
   - ''
+  - à
+  - ''
+  - é
+  - è
+  - '&e_circ'
+  - ù
+  - '&u_circ'
+  - '&i_circ'
+  - '&i_trema'
   - ''
   - ''
   - ''
@@ -171,16 +180,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - ç
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -259,6 +259,11 @@ layers:
   - ''
   - ''
   - ''
+  - /
+  - '*'
+  - '7'
+  - '8'
+  - '9'
   - ''
   - ''
   - ''
@@ -266,6 +271,11 @@ layers:
   - ''
   - ''
   - ''
+  - '-'
+  - +
+  - '4'
+  - '5'
+  - '6'
   - ''
   - ''
   - ''
@@ -273,15 +283,15 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '0'
+  - ENTER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
   - ''
   - ''
   - ''
@@ -289,17 +299,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

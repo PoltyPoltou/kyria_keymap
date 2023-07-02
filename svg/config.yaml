@@ -1,13 +1,13 @@
 draw_config:
-  key_w: 60.0
-  key_h: 56.0
-  split_gap: 30.0
+  key_w: 50.0
+  key_h: 50.0
+  split_gap: 10.0
   combo_w: 28.0
   combo_h: 26.0
-  key_rx: 6.0
-  key_ry: 6.0
-  inner_pad_w: 2.0
-  inner_pad_h: 2.0
+  key_rx: 0
+  key_ry: 0
+  inner_pad_w: 2
+  inner_pad_h: 2
   outer_pad_w: 30.0
   outer_pad_h: 56.0
   line_spacing: 1.2
@@ -27,23 +27,24 @@ draw_config:
         font-kerning: normal;
         text-rendering: optimizeLegibility;
         fill: #24292e;
+        background: #264653;
     }
 
     /* default key styling */
     rect.key {
-        fill: #f6f8fa;
-        stroke: #c9cccf;
-        stroke-width: 1;
+        fill: #2A9D8F;
+        stroke: #F4A261;
+        stroke-width: 0;
     }
 
     /* color accent for combo boxes */
     rect.combo {
-        fill: #cdf;
+        fill: #f4a261;
     }
 
     /* color accent for held keys */
     rect.held, rect.combo.held {
-        fill: #fdd;
+        fill: #E76F51;
     }
 
     /* color accent for ghost (optional) keys */
@@ -52,6 +53,7 @@ draw_config:
     }
 
     text {
+        fill: white;
         text-anchor: middle;
         dominant-baseline: middle;
     }
@@ -60,7 +62,6 @@ draw_config:
     text.label {
         font-weight: bold;
         text-anchor: start;
-        stroke: white;
         stroke-width: 2;
         paint-order: stroke;
     }
@@ -87,7 +88,7 @@ draw_config:
 
     /* lighter symbol for transparent keys */
     text.trans {
-        fill: #7b7e81;
+        fill: #E76F51;
     }
 
     /* styling for combo dendrons */
@@ -127,136 +128,152 @@ parse_config:
   trans_legend:
     t: ▽
     type: trans
-  qmk_keycode_map:
-    XXXXXXX: ''
-    'NO': ''
-    MINUS: '-'
-    MINS: '-'
-    EQUAL: '='
-    EQL: '='
-    LEFT_BRACKET: '['
-    LBRC: '['
-    RIGHT_BRACKET: ']'
-    RBRC: ']'
-    BACKSLASH: \
-    BSLS: \
-    NONUS_HASH: '#'
-    NUHS: '#'
-    SEMICOLON: ;
-    SCLN: ;
-    QUOTE: ''''
-    QUOT: ''''
-    GRAVE: '`'
-    GRV: '`'
-    COMMA: ','
-    COMM: ','
-    DOT: .
-    SLASH: /
-    SLSH: /
-    TILDE: '~'
-    TILD: '~'
-    EXCLAIM: '!'
-    EXLM: '!'
-    AT: '@'
-    HASH: '#'
-    DOLLAR: $
-    DLR: $
-    PERCENT: '%'
-    PERC: '%'
-    CIRCUMFLEX: ^
-    CIRC: ^
-    AMPERSAND: '&'
-    AMPR: '&'
-    ASTERISK: '*'
-    ASTR: '*'
-    LEFT_PAREN: (
-    LPRN: (
-    RIGHT_PAREN: )
-    RPRN: )
-    UNDERSCORE: _
-    UNDS: _
-    PLUS: +
-    LEFT_CURLY_BRACE: '{'
-    LCBR: '{'
-    RIGHT_CURLY_BRACE: '}'
-    RCBR: '}'
-    PIPE: '|'
-    COLON: ':'
-    COLN: ':'
-    DOUBLE_QUOTE: '"'
-    DQUO: '"'
-    DQT: '"'
-    LEFT_ANGLE_BRACKET: <
-    LABK: <
-    LT: <
-    RIGHT_ANGLE_BRACKET: '>'
-    RABK: '>'
-    GT: '>'
-    QUESTION: '?'
-    QUES: '?'
   zmk_keycode_map:
-    EXCLAMATION: '!'
-    EXCL: '!'
-    AT_SIGN: '@'
-    AT: '@'
-    HASH: '#'
-    POUND: '#'
+    EXCLAMATION: "!"
+    EXCL: "!"
+    AT_SIGN: "@"
+    AT: "@"
+    HASH: "#"
+    POUND: "#"
     DOLLAR: $
     DLLR: $
-    PERCENT: '%'
-    PRCNT: '%'
+    PERCENT: "%"
+    PRCNT: "%"
     CARET: ^
-    AMPERSAND: '&'
-    AMPS: '&'
-    ASTERISK: '*'
-    ASTRK: '*'
-    STAR: '*'
+    AMPERSAND: "&"
+    AMPS: "&"
+    ASTERISK: "*"
+    RET: "ENTER"
+    ASTRK: "*"
+    STAR: "*"
     LEFT_PARENTHESIS: (
     LPAR: (
     RIGHT_PARENTHESIS: )
     RPAR: )
-    EQUAL: '='
+    EQUAL: "="
     PLUS: +
-    MINUS: '-'
+    MINUS: "-"
     UNDERSCORE: _
     UNDER: _
     SLASH: /
     FSLH: /
-    QUESTION: '?'
-    QMARK: '?'
+    QUESTION: "?"
+    QMARK: "?"
     BACKSLASH: \
     BSLH: \
-    PIPE: '|'
+    PIPE: "|"
     NON_US_BACKSLASH: \
-    PIPE2: '|'
-    NON_US_BSLH: '|'
+    PIPE2: "|"
+    NON_US_BSLH: "|"
     SEMICOLON: ;
     SEMI: ;
-    COLON: ':'
-    SINGLE_QUOTE: ''''
-    SQT: ''''
+    COLON: ":"
+    SINGLE_QUOTE: "'"
+    SQT: "'"
     APOSTROPHE: <
     APOS: .
     DOUBLE_QUOTES: '"'
     DQT: '"'
-    COMMA: ','
+    COMMA: ","
     LESS_THAN: <
     LT: <
     PERIOD: .
     DOT: .
-    GREATER_THAN: '>'
-    GT: '>'
-    LEFT_BRACKET: '['
-    LBKT: '['
-    LEFT_BRACE: '{'
-    LBRC: '{'
-    RIGHT_BRACKET: ']'
-    RBKT: ']'
-    RIGHT_BRACE: '}'
-    RBRC: '}'
-    GRAVE: '`'
-    TILDE: '~'
-    NON_US_HASH: '#'
-    NUHS: '#'
-    TILDE2: '~'
+    GREATER_THAN: ">"
+    GT: ">"
+    LEFT_BRACKET: "["
+    LBKT: "["
+    LEFT_BRACE: "{"
+    LBRC: "{"
+    RIGHT_BRACKET: "]"
+    RBKT: "]"
+    RIGHT_BRACE: "}"
+    RBRC: "}"
+    GRAVE: "`"
+    TILDE: "~"
+    NON_US_HASH: "#"
+    NUHS: "#"
+    TILDE2: "~"
+    FR_SUP2: "²"
+    FR_AMPR: "&"
+    FR_EACU: "é"
+    FR_DQUO: '"'
+    FR_QUOT: "'"
+    FR_LPRN: "("
+    FR_MINS: "-"
+    FR_EGRV: "è"
+    FR_UNDS: "_"
+    FR_CCED: "ç"
+    FR_AGRV: "à"
+    FR_RPRN: ")"
+    FR_EQL: "="
+    FR_A: "A"
+    FR_Z: "Z"
+    FR_E: "E"
+    FR_R: "R"
+    FR_T: "T"
+    FR_Y: "Y"
+    FR_U: "U"
+    FR_I: "I"
+    FR_O: "O"
+    FR_P: "P"
+    FR_CIRC: "^"
+    FR_DLR: "$"
+    FR_Q: "Q"
+    FR_S: "S"
+    FR_D: "D"
+    FR_F: "F"
+    FR_G: "G"
+    FR_H: "H"
+    FR_J: "J"
+    FR_K: "K"
+    FR_L: "L"
+    FR_M: "M"
+    FR_UGRV: "ù"
+    FR_ASTR: "*"
+    FR_LABK: "<"
+    FR_W: "W"
+    FR_X: "X"
+    FR_C: "C"
+    FR_V: "V"
+    FR_B: "B"
+    FR_N: "N"
+    FR_COMM: ","
+    FR_SCLN: ";"
+    FR_COLN: ":"
+    FR_EXLM: "!"
+    FR_1: "1"
+    FR_2: "2"
+    FR_3: "3"
+    FR_4: "4"
+    FR_5: "5"
+    FR_6: "6"
+    FR_7: "7"
+    FR_8: "8"
+    FR_9: "9"
+    FR_0: "0"
+    FR_DEG: "°"
+    FR_PLUS: "+"
+    FR_DIAE: "¨"
+    FR_PND: "£"
+    FR_PERC: "%"
+    FR_MICR: "µ"
+    FR_RABK: ">"
+    FR_QUES: "?"
+    FR_DOT: "."
+    FR_SLSH: "/"
+    FR_SECT: "§"
+    FR_TILD: "~"
+    FR_HASH: "#"
+    FR_LCBR: "{"
+    FR_LBRC: "["
+    FR_PIPE: "|"
+    FR_GRV: "`"
+    FR_BSLS: "\\"
+    FR_AT: "@"
+    FR_RBRC: "]"
+    FR_RCBR: "}"
+    FR_EURO: "€"
+    FR_CURR: "¤"
+    "&FR_E_CIRC": "ê"
   zmk_combos: {}
