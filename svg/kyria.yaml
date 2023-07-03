@@ -23,7 +23,7 @@ layers:
   - {t: K, h: RSHIFT}
   - {t: L, h: LALT}
   - M
-  - TAB
+  - ''
   - '&td_caps'
   - W
   - X
@@ -40,16 +40,16 @@ layers:
   - ':'
   - '!'
   - RALT
-  - ''
-  - ''
-  - {t: BSPC, h: LOWER}
+  - AL PREV TASK
+  - LGUI
   - {t: SPACE, h: NAV, s: _}
+  - {t: SPACE, h: LOWER, s: _}
   - {t: DEL, h: KEYPAD}
   - ENTER
-  - {t: SPACE, h: FR, s: _}
+  - {t: BSPC, h: FR}
   - {t: BSPC, h: UPPER}
-  - ''
-  - ''
+  - RGUI
+  - AL NEXT TASK
   LOWER:
   - £
   - '@'
@@ -65,14 +65,14 @@ layers:
   - ''
   - €
   - '#'
-  - '&'
-  - _
-  - '['
+  - {t: '&', h: LALT}
+  - {t: _, h: LSHIFT}
+  - {t: '[', h: LCTRL}
   - '*'
   - '?'
-  - ']'
-  - ''''
-  - '-'
+  - {t: ']', h: RCTRL}
+  - {t: '''', h: RSHIFT}
+  - {t: '-', h: LALT}
   - '`'
   - ''
   - $
@@ -93,8 +93,8 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -155,7 +155,7 @@ layers:
   FR:
   - ''
   - à
-  - ''
+  - '&a_circ'
   - é
   - è
   - '&e_circ'
@@ -163,6 +163,7 @@ layers:
   - '&u_circ'
   - '&i_circ'
   - '&i_trema'
+  - '&o_circ'
   - ''
   - ''
   - ''
@@ -170,10 +171,9 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - .
+  - '!'
+  - '?'
   - ''
   - ''
   - ''
@@ -187,8 +187,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - ''
+  - ','
+  - ''''
   - ''
   - ''
   - ''
@@ -206,48 +206,48 @@ layers:
   NAV:
   - ''
   - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - PG UP
+  - UP
+  - PG DN
   - ''
   - ''
   - ''
   - ''
   - ''
+  - {t: F5, h: LALT}
+  - {t: F6, h: LSHIFT}
+  - {t: F7, h: LCTRL}
+  - F8
+  - LEFT
+  - {t: DOWN, h: RCTRL}
+  - {t: RIGHT, h: RSHIFT}
+  - LALT
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - F9
+  - F10
+  - F11
+  - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - HOME
+  - ''
+  - END
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -261,37 +261,37 @@ layers:
   - ''
   - /
   - '*'
-  - '7'
-  - '8'
-  - '9'
+  - KP 7
+  - KP 8
+  - KP 9
   - ''
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - '-'
+  - LALT
+  - LSHIFT
+  - {t: '-', h: LCTRL}
   - +
-  - '4'
-  - '5'
-  - '6'
+  - KP 4
+  - {t: KP 5, h: RCTRL}
+  - {t: KP 6, h: RSHIFT}
+  - RALT
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - '0'
+  - KP 0
   - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
+  - KP 1
+  - KP 2
+  - KP 3
   - ''
   - ''
   - ''
@@ -305,3 +305,57 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  SYS:
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT 0
+  - BT 4
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT 1
+  - BT 5
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - OUT TOG
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT 2
+  - {t: ▽, type: trans}
+  - '&bootloader'
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - BT 6
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&sys_reset'
+  - '&sys_reset'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+combos:
+- p: [40, 49]
+  k: {t: SYS, h: sticky}
