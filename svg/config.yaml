@@ -276,4 +276,5 @@ parse_config:
     FR_EURO: "€"
     FR_CURR: "¤"
     "&FR_E_CIRC": "ê"
+    KP_MULTIPLY: '*'
   zmk_combos: {}
