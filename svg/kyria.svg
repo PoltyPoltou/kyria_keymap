@@ -181,14 +181,11 @@ path.combo {
 <rect rx="0.0" ry="0.0" x="807.0" y="195.5" width="46.0" height="46.0" class="key"/>
 <text x="830.0" y="218.5" class="tap">RALT</text>
 <rect rx="0.0" ry="0.0" x="157.0" y="220.5" width="46.0" height="46.0" class="key"/>
-<text x="180.0" y="243.5" class="tap">
-<tspan x="180.0" dy="-1.2em">AL</tspan><tspan x="180.0" dy="1.2em">PREV</tspan><tspan x="180.0" dy="1.2em">TASK</tspan></text>
 <rect rx="0.0" ry="0.0" x="207.0" y="220.5" width="46.0" height="46.0" class="key"/>
 <text x="230.0" y="243.5" class="tap">LGUI</text>
 <rect rx="0.0" ry="0.0" x="257.0" y="233.0" width="46.0" height="46.0" class="key"/>
-<text x="280.0" y="256.0" class="tap">SPACE</text>
+<text x="280.0" y="256.0" class="tap">LSHIFT</text>
 <text x="280.0" y="277.0" class="hold">NAV</text>
-<text x="280.0" y="235.0" class="shifted">_</text>
 <rect rx="0.0" ry="0.0" x="307.0" y="258.0" width="46.0" height="46.0" class="key"/>
 <text x="330.0" y="281.0" class="tap">SPACE</text>
 <text x="330.0" y="302.0" class="hold">LOWER</text>
@@ -228,9 +225,10 @@ path.combo {
 <rect rx="0.0" ry="0.0" x="232.0" y="389.0" width="46.0" height="46.0" class="key"/>
 <text x="255.0" y="412.0" class="tap">(</text>
 <rect rx="0.0" ry="0.0" x="282.0" y="401.5" width="46.0" height="46.0" class="key"/>
-<text x="305.0" y="424.5" class="tap">&lt;</text>
+<text x="305.0" y="424.5" class="tap">|</text>
 <rect rx="0.0" ry="0.0" x="557.0" y="401.5" width="46.0" height="46.0" class="key"/>
-<text x="580.0" y="424.5" class="tap">&gt;</text>
+<text x="580.0" y="424.5" class="tap">
+<tspan x="580.0" dy="-1.2em">LS(NON</tspan><tspan x="580.0" dy="1.2em">US</tspan><tspan x="580.0" dy="1.2em">BSLH)</tspan></text>
 <rect rx="0.0" ry="0.0" x="607.0" y="389.0" width="46.0" height="46.0" class="key"/>
 <text x="630.0" y="412.0" class="tap">)</text>
 <rect rx="0.0" ry="0.0" x="657.0" y="376.5" width="46.0" height="46.0" class="key"/>
@@ -414,9 +412,8 @@ path.combo {
 <rect rx="0.0" ry="0.0" x="657.0" y="1013.5" width="46.0" height="46.0" class="key"/>
 <text x="680.0" y="1036.5" class="tap">&amp;i_circ</text>
 <rect rx="0.0" ry="0.0" x="707.0" y="1026.0" width="46.0" height="46.0" class="key"/>
-<text x="730.0" y="1049.0" class="tap" style="font-size: 88%">&amp;i_trema</text>
+<text x="730.0" y="1049.0" class="tap">&amp;o_circ</text>
 <rect rx="0.0" ry="0.0" x="757.0" y="1051.0" width="46.0" height="46.0" class="key"/>
-<text x="780.0" y="1074.0" class="tap">&amp;o_circ</text>
 <rect rx="0.0" ry="0.0" x="807.0" y="1051.0" width="46.0" height="46.0" class="key"/>
 <rect rx="0.0" ry="0.0" x="32.0" y="1101.0" width="46.0" height="46.0" class="key"/>
 <rect rx="0.0" ry="0.0" x="82.0" y="1101.0" width="46.0" height="46.0" class="key"/>
@@ -431,6 +428,7 @@ path.combo {
 <rect rx="0.0" ry="0.0" x="657.0" y="1063.5" width="46.0" height="46.0" class="key"/>
 <text x="680.0" y="1086.5" class="tap">?</text>
 <rect rx="0.0" ry="0.0" x="707.0" y="1076.0" width="46.0" height="46.0" class="key"/>
+<text x="730.0" y="1099.0" class="tap" style="font-size: 88%">&amp;i_trema</text>
 <rect rx="0.0" ry="0.0" x="757.0" y="1101.0" width="46.0" height="46.0" class="key"/>
 <rect rx="0.0" ry="0.0" x="807.0" y="1101.0" width="46.0" height="46.0" class="key"/>
 <rect rx="0.0" ry="0.0" x="32.0" y="1151.0" width="46.0" height="46.0" class="key"/>

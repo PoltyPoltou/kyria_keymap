@@ -37,16 +37,37 @@
             label = "modmorph_hold_tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
+            retro-tap;
             tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
             bindings = <&mo>, <&maj_space>;
         };
-        mht: my_hold_tap {
+        sl_ht: sticky_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "mod_hold_tap";
+            label = "sticky_hold_tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
+            bindings = <&mo>, <&sk>;
+        };
+        hrm_ht: my_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "home row mod hold tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            global-quick-tap;
+            quick-tap-ms = <200>;
+            tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
+        };
+        retro_ht: retro_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mod_hold_tap";
+            #binding-cells = <2>;
+            retro-tap;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&mo>, <&kp>;
         };
         td_caps: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -138,9 +159,9 @@
         AZERTY_layer {
             bindings = <
             &kp ESC &kp FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T                                  &kp FR_Y &kp FR_U &kp FR_I &kp FR_O &kp FR_P &kp FR_CIRC
-            &kp TAB &kp FR_Q &mht LALT FR_S &mht LSHIFT FR_D &mht LCTRL FR_F &kp FR_G             &kp FR_H &mht RCTRL FR_J &mht RSHIFT FR_K &mht LALT FR_L &kp FR_M &none
+            &kp TAB &kp FR_Q &hrm_ht LALT FR_S &hrm_ht LSHIFT FR_D &hrm_ht LCTRL FR_F &kp FR_G             &kp FR_H &hrm_ht RCTRL FR_J &hrm_ht RSHIFT FR_K &hrm_ht LALT FR_L &kp FR_M &none
             &td_caps &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B &none &kp C_AC_COPY             &kp C_AC_PASTE &none &kp FR_N &kp FR_COMM &kp FR_SCLN &kp FR_COLN &kp FR_EXLM &kp RALT
-            &kp C_AL_PREV_TASK &kp LGUI &mrphlt NAV 0 &mrphlt LOWER 0 &lt KEYPAD DEL                               &kp RET &lt FR BSPC &lt UPPER BSPC &kp RGUI &kp C_AL_NEXT_TASK
+            &none &kp LGUI &sl_ht NAV LSHIFT &mrphlt LOWER 0 &lt KEYPAD DEL                               &kp RET &retro_ht FR BSPC &retro_ht UPPER BSPC &kp RGUI &kp C_AL_NEXT_TASK
             >;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
 
@@ -148,8 +169,8 @@
 
         LOWER_layer {
             bindings = <
-            &kp FR_PND &kp FR_AT &kp FR_PIPE &kp FR_MINS &kp FR_LPRN &kp LT                                                     &kp GT &kp FR_RPRN &kp FR_DQUO &kp FR_PLUS &kp FR_CURR &none
-            &kp FR_EURO &kp FR_HASH &mht LALT FR_AMPR &mht LSHIFT FR_UNDS &mht LCTRL FR_LBRC &kp KP_MULTIPLY                   &kp FR_QUES &mht RCTRL FR_RBRC &mht RSHIFT FR_QUOT &mht LALT FR_MINS &kp FR_GRV &none
+            &kp FR_PND &kp FR_AT &kp FR_PIPE &kp FR_MINS &kp FR_LPRN &kp NON_US_BSLH                                                    &kp LS(NON_US_BSLH) &kp FR_RPRN &kp FR_DQUO &kp FR_PLUS &kp FR_CURR &none
+            &kp FR_EURO &kp FR_HASH &hrm_ht LALT FR_AMPR &hrm_ht LSHIFT FR_UNDS &hrm_ht LCTRL FR_LBRC &kp KP_MULTIPLY                   &kp FR_QUES &hrm_ht RCTRL FR_RBRC &hrm_ht RSHIFT FR_QUOT &hrm_ht LALT FR_MINS &kp FR_GRV &none
             &kp FR_DLR &none &kp FR_TILD &none &kp FR_LCBR &kp FR_BSLS &trans &trans                                         &trans &trans &kp FR_SLSH &kp FR_RCBR &kp FR_PERC &kp FR_EQL &kp FR_SECT &none
             &trans &trans &trans &trans &trans                                                                      &trans &trans &trans &trans &trans
             >;
@@ -170,8 +191,8 @@
 
         FR_layer {
             bindings = <
-            &none &kp FR_AGRV &a_circ &kp FR_EACU &kp FR_EGRV &e_circ             &kp FR_UGRV &u_circ &i_circ &i_trema &o_circ &none
-            &none &none &none &none &none &none                                 &kp FR_DOT &kp FR_EXLM &kp FR_QUES &none &none &none
+            &none &kp FR_AGRV &a_circ &kp FR_EACU &kp FR_EGRV &e_circ             &kp FR_UGRV &u_circ &i_circ &o_circ &none &none
+            &none &none &none &none &none &none                                 &kp FR_DOT &kp FR_EXLM &kp FR_QUES &i_trema &none &none
             &none &none &none &kp FR_CCED &none &none &trans &trans             &trans &trans &kp FR_COMM &kp FR_QUOT &none &none &none &none
             &trans &trans &trans &trans &trans                                  &trans &trans &trans &trans &trans
             >;
@@ -182,7 +203,7 @@
         NAV_layer {
             bindings = <
             &none &none &kp F1 &kp F2 &kp F3 &kp F4                                             &kp PG_UP &kp UP &kp PG_DN &none &none &none
-            &none &none &mt LALT F5 &mt LSHIFT F6 &mt LCTRL F7 &kp F8                           &kp LEFT &mt RCTRL DOWN &mt RSHIFT RIGHT &kp LALT &none &none
+            &none &none &hrm_ht LALT F5 &hrm_ht LSHIFT F6 &hrm_ht LCTRL F7 &kp F8                           &kp LEFT &hrm_ht RCTRL DOWN &hrm_ht RSHIFT RIGHT &kp LALT &none &none
             &none &none &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans                &trans &trans &kp HOME &none &kp END &none &none &none
             &trans &trans &trans &trans &trans                                      &trans &trans &trans &trans &trans
             >;

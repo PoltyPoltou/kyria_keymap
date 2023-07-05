@@ -40,9 +40,9 @@ layers:
   - ':'
   - '!'
   - RALT
-  - AL PREV TASK
+  - ''
   - LGUI
-  - {t: SPACE, h: NAV, s: _}
+  - {t: LSHIFT, h: NAV}
   - {t: SPACE, h: LOWER, s: _}
   - {t: DEL, h: KEYPAD}
   - ENTER
@@ -56,8 +56,8 @@ layers:
   - '|'
   - '-'
   - (
-  - <
-  - '>'
+  - '|'
+  - LS(NON US BSLH)
   - )
   - '"'
   - +
@@ -162,8 +162,8 @@ layers:
   - ù
   - '&u_circ'
   - '&i_circ'
-  - '&i_trema'
   - '&o_circ'
+  - ''
   - ''
   - ''
   - ''
@@ -174,7 +174,7 @@ layers:
   - .
   - '!'
   - '?'
-  - ''
+  - '&i_trema'
   - ''
   - ''
   - ''
