@@ -64,6 +64,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "mod_hold_tap";
             #binding-cells = <2>;
+            flavor = "tap-preferred";
             retro-tap;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
