@@ -10,10 +10,10 @@ if [[ -n $(docker ps | grep $CONTAINER_NAME) ]]; then
 else
     docker start $CONTAINER_NAME
 fi
-docker exec -it $CONTAINER_NAME sh -c "/workspaces/zmk/kyria_keymap/container_build.sh $1"
-docker exec -it $CONTAINER_NAME sh -c "cp /workspaces/zmk/app/build/left/zephyr/zmk.uf2 /workspaces/zmk/kyria_keymap/left.uf2"
-docker exec -it $CONTAINER_NAME sh -c "cp /workspaces/zmk/app/build/right/zephyr/zmk.uf2 /workspaces/zmk/kyria_keymap/right.uf2"
-docker exec -it $CONTAINER_NAME sh -c "chown -R 1000:1000 /workspaces/zmk/kyria_keymap/*.uf2"
+docker exec -t $CONTAINER_NAME sh -c "/workspaces/zmk/kyria_keymap/container_build.sh $1"
+docker exec -t $CONTAINER_NAME sh -c "cp /workspaces/zmk/app/build/left/zephyr/zmk.uf2 /workspaces/zmk/kyria_keymap/left.uf2"
+docker exec -t $CONTAINER_NAME sh -c "cp /workspaces/zmk/app/build/right/zephyr/zmk.uf2 /workspaces/zmk/kyria_keymap/right.uf2"
+docker exec -t $CONTAINER_NAME sh -c "chown -R 1000:1000 /workspaces/zmk/kyria_keymap/*.uf2"
 if [[ -z IS_ALREADY_RUNNING ]]; then
     docker stop $CONTAINER_NAME
 fi

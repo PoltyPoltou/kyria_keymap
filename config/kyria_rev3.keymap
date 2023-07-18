@@ -11,8 +11,8 @@
 #include "french.h"
 
 #define AZERTY 0
-#define LOWER 1
-#define UPPER 2
+#define DEVELOP 1
+#define SYMBOL 2
 #define FR 3
 #define NAV 4
 #define KEYPAD 5
@@ -25,32 +25,31 @@
 / {
 
     behaviors {
-        maj_space: space_underscore{
+        maj_space: maj_space{
             compatible = "zmk,behavior-mod-morph";
             label = "space is a undersore";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp FR_UNDS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        mrphlt: modmorph_hold_tap {
+        mrphlt: mrphlt {
             compatible = "zmk,behavior-hold-tap";
             label = "modmorph_hold_tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            retro-tap;
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&maj_space>;
         };
-        sl_ht: sticky_hold_tap {
+        sl_ht: sl_ht {
             compatible = "zmk,behavior-hold-tap";
             label = "sticky_hold_tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&sk>;
         };
-        hrm_ht: my_hold_tap {
+        hrm_ht: hrm_ht {
             compatible = "zmk,behavior-hold-tap";
             label = "home row mod hold tap";
             #binding-cells = <2>;
@@ -60,142 +59,158 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
-        retro_ht: retro_ht {
+        accent_ht: accent_ht {
             compatible = "zmk,behavior-hold-tap";
-            label = "mod_hold_tap";
+            label = "hold tap for accents";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            retro-tap;
+            quick-tap-ms = <200>;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+        circ_ht: circ_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "hold tap for circ trema";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&trema>, <&circ>;
+        };
+        cust_mt: cust_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "personal mod tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
         };
-        td_caps: tap_dance_0 {
+        cust_ht: cust_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "personal hold tap with 2 kp";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+        td_caps: td_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CAPS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&caps_word>;
         };
+        copy_paste_cut: copy_paste_cut {
+            compatible = "zmk,behavior-tap-dance";
+            label = "copy cut tapdance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp LC(FR_C)>, <&kp LC(FR_V)>, <&kp LC(FR_X)>;
+        };
+        td_nb: td_nb {
+            compatible = "zmk,behavior-tap-dance";
+            label = "number of taps correspond to the number";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp KP_N1>,<&kp KP_N2>,<&kp KP_N3>,<&kp KP_N4>,<&kp KP_N5>,<&kp KP_N5>,<&kp KP_N6>,<&kp KP_N7>,<&kp KP_N8>,<&kp KP_N9>;
+        };
+        td_quotes: td_quotes {
+            compatible = "zmk,behavior-tap-dance";
+            label = "quotes tapdance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_QUOT>, <&kp FR_DQUO>;
+        };
         combos {
             compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <50>;
+            system {
+                timeout-ms = <200>;
                 key-positions = <40 49>;
                 bindings = <&sl SYS>;
+                layers = <AZERTY DEVELOP>;
             };
         };
     };
     macros {
-        e_circ: e_circ {
-            label = "ZM_e_circ";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+        trema: trema {
+            label = "add a trema macro";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             wait-ms = <0>;
             tap-ms = <20>;
             bindings
-                = <&macro_tap &kp FR_CIRC>
-                , <&macro_tap &kp FR_E>
-                ;
+                = <&kp FR_DIAE>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>;
         };
-        i_circ: i_circ {
-            label = "ZM_i_circ";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+        circ: circ {
+            label = "add a circ macro";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             wait-ms = <0>;
             tap-ms = <20>;
             bindings
-                = <&macro_tap &kp FR_CIRC>
-                , <&macro_tap &kp FR_I>
-                ;
+                = <&kp FR_CIRC>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>;
         };
-        i_trema: i_trema {
-            label = "ZM_i_trema";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+        not_dead: not_dead {
+            label = "transform a dead key into a non dead key";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             wait-ms = <0>;
             tap-ms = <20>;
             bindings
-                = <&macro_tap &kp FR_DIAE>
-                , <&macro_tap &kp FR_I>
-                ;
+                = <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&kp SPACE>;
         };
-        u_circ: u_circ {
-            label = "ZM_u_circ";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_tap &kp FR_CIRC>
-                , <&macro_tap &kp FR_U>
-                ;
-        };
-        o_circ: o_circ {
-            label = "ZM_o_circ";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_tap &kp FR_CIRC>
-                , <&macro_tap &kp FR_O>
-                ;
-        };
-        a_circ: a_circ {
-            label = "ZM_a_circ";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_tap &kp FR_CIRC>
-                , <&macro_tap &kp FR_A>
-                ;
-        };
+
     };
     keymap {
         compatible = "zmk,keymap";
 
         AZERTY_layer {
             bindings = <
-            &kp ESC &kp FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T                                  &kp FR_Y &kp FR_U &kp FR_I &kp FR_O &kp FR_P &kp FR_CIRC
-            &kp TAB &kp FR_Q &hrm_ht LALT FR_S &hrm_ht LSHIFT FR_D &hrm_ht LCTRL FR_F &kp FR_G             &kp FR_H &hrm_ht RCTRL FR_J &hrm_ht RSHIFT FR_K &hrm_ht LALT FR_L &kp FR_M &none
-            &td_caps &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B &none &kp C_AC_COPY             &kp C_AC_PASTE &none &kp FR_N &kp FR_COMM &kp FR_SCLN &kp FR_COLN &kp FR_EXLM &kp RALT
-            &none &kp LGUI &sl_ht NAV LSHIFT &mrphlt LOWER 0 &lt KEYPAD DEL                               &kp RET &retro_ht FR BSPC &retro_ht UPPER BSPC &kp RGUI &kp C_AL_NEXT_TASK
+            &kp ESC &accent_ht FR_AGRV FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T                                  &kp FR_Y &accent_ht FR_UGRV FR_U &kp FR_I &kp FR_O &kp FR_P &kp FR_CIRC
+            &kp TAB &kp FR_Q &hrm_ht LALT FR_S &hrm_ht LSHIFT FR_D &hrm_ht LCTRL FR_F &kp FR_G             &kp FR_H &hrm_ht RCTRL FR_J &hrm_ht RSHIFT FR_K &hrm_ht LALT FR_L &kp FR_M &kp FR_QUES
+            &td_caps &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B &kp CAPS &copy_paste_cut             &kp DEL &kp PRINTSCREEN &kp FR_N &kp FR_EACU &kp FR_EGRV &td_quotes &cust_ht FR_COLN FR_DOT &kp FR_EXLM
+            &kp LALT &kp LGUI &sl_ht KEYPAD LSHIFT &mrphlt NAV 0 &kp FR_COMM                               &kp RET &cust_mt FR BSPC &mo SYMBOL &sk LCTRL &tog DEVELOP
             >;
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
 
         };
 
-        LOWER_layer {
+        DEVELOP_layer {
             bindings = <
-            &kp FR_PND &kp FR_AT &kp FR_PIPE &kp FR_MINS &kp FR_LPRN &kp NON_US_BSLH                                                    &kp LS(NON_US_BSLH) &kp FR_RPRN &kp FR_DQUO &kp FR_PLUS &kp FR_CURR &none
-            &kp FR_EURO &kp FR_HASH &hrm_ht LALT FR_AMPR &hrm_ht LSHIFT FR_UNDS &hrm_ht LCTRL FR_LBRC &kp KP_MULTIPLY                   &kp FR_QUES &hrm_ht RCTRL FR_RBRC &hrm_ht RSHIFT FR_QUOT &hrm_ht LALT FR_MINS &kp FR_GRV &none
-            &kp FR_DLR &none &kp FR_TILD &none &kp FR_LCBR &kp FR_BSLS &trans &trans                                         &trans &trans &kp FR_SLSH &kp FR_RCBR &kp FR_PERC &kp FR_EQL &kp FR_SECT &none
-            &trans &trans &trans &trans &trans                                                                      &trans &trans &trans &trans &trans
+            &kp ESC &kp FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T                                  &kp FR_Y &kp FR_U &kp FR_I &kp FR_O &kp FR_P &not_dead FR_CIRC
+            &kp TAB &kp FR_Q &hrm_ht LALT FR_S &hrm_ht LSHIFT FR_D &hrm_ht LCTRL FR_F &kp FR_G             &kp FR_H &hrm_ht RCTRL FR_J &hrm_ht RSHIFT FR_K &hrm_ht LALT FR_L &kp FR_M &kp FR_HASH
+            &td_caps &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B &kp CAPS &copy_paste_cut             &kp DEL &kp PRINTSCREEN &kp FR_N &kp FR_COMM &kp FR_SCLN &td_quotes &kp FR_DOT &cust_ht FR_QUES FR_EXLM
+            &kp LALT &kp LGUI &sl_ht KEYPAD LSHIFT &mrphlt NAV 0 &kp FR_COLN                               &kp RET &cust_mt SYMBOL BSPC &cust_ht FR_BSLS FR_SLSH &sk LCTRL &tog DEVELOP
             >;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
         };
 
-        UPPER_layer {
+        SYMBOL_layer {
             bindings = <
-            &none &none &none &none &none &none                     &none &none &none &none &none &none
-            &none &none &none &none &none &none                     &none &none &none &none &none &none
-            &none &none &none &none &none &none &trans &trans         &trans &trans &none &none &none &none &none &none
-            &trans &trans &trans &trans &trans                           &trans &trans &trans &trans &trans
+            &kp FR_PND &kp FR_AT &kp FR_LABK &kp FR_LPRN &kp FR_RPRN &kp FR_RABK                                                    &kp FR_PIPE &kp FR_LBRC &kp FR_RBRC &kp FR_TILD &none &kp FR_CURR
+            &kp FR_EURO &none &hrm_ht LALT FR_DLR &hrm_ht LSHIFT FR_MINS &hrm_ht LCTRL FR_UNDS &kp FR_EQL        		&kp FR_PERC &hrm_ht RCTRL KP_MULTIPLY &hrm_ht RSHIFT FR_PLUS &hrm_ht LALT FR_AMPR &none &not_dead FR_GRV
+            &none &none &kp FR_0 &kp FR_LCBR &kp FR_RCBR &td_nb &trans &trans                                                       &trans &trans &none &none &none &none &none &kp FR_SECT
+            &trans &trans &trans &trans &trans                                                                                      &trans &trans &trans &trans &trans
             >;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
         };
 
         FR_layer {
             bindings = <
-            &none &kp FR_AGRV &a_circ &kp FR_EACU &kp FR_EGRV &e_circ             &kp FR_UGRV &u_circ &i_circ &o_circ &none &none
-            &none &none &none &none &none &none                                 &kp FR_DOT &kp FR_EXLM &kp FR_QUES &i_trema &none &none
-            &none &none &none &kp FR_CCED &none &none &trans &trans             &trans &trans &kp FR_COMM &kp FR_QUOT &none &none &none &none
-            &trans &trans &trans &trans &trans                                  &trans &trans &trans &trans &trans
+            &none &circ_ht FR_A FR_A &none &circ_ht E E &none &none                &none &circ U &circ_ht I I &circ O &none &none
+            &none &none &none &none &none &none 				   &none &none &none &none &none &none
+            &none &none &none &kp FR_CCED &kp FR_CIRC &kp FR_DIAE &trans &trans    &trans &trans &none &none &none &none &none &none
+            &trans &trans &trans &trans &trans                                     &trans &trans &trans &trans &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
@@ -203,9 +218,9 @@
 
         NAV_layer {
             bindings = <
-            &none &none &kp F1 &kp F2 &kp F3 &kp F4                                             &kp PG_UP &kp UP &kp PG_DN &none &none &none
-            &none &none &hrm_ht LALT F5 &hrm_ht LSHIFT F6 &hrm_ht LCTRL F7 &kp F8                           &kp LEFT &hrm_ht RCTRL DOWN &hrm_ht RSHIFT RIGHT &kp LALT &none &none
-            &none &none &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans                &trans &trans &kp HOME &none &kp END &none &none &none
+            &kp LA(F4) &none &kp F1 &kp F2 &kp F3 &kp F4                                 &none &kp PG_UP &kp UP &kp PG_DN &none &kp LA(F4)
+            &none &none &hrm_ht LALT F5 &hrm_ht LSHIFT F6 &hrm_ht LCTRL F7 &kp F8   &none &hrm_ht LCTRL LEFT &hrm_ht RSHIFT DOWN &hrm_ht LALT RIGHT &none &none
+            &none &none &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans                &trans &trans &none &kp HOME &none &kp END &none &none
             &trans &trans &trans &trans &trans                                      &trans &trans &trans &trans &trans
             >;
 
@@ -214,10 +229,10 @@
 
         KEYPAD_layer {
             bindings = <
-            &none &none &none &none &kp FR_SLSH &kp KP_MULTIPLY                                     &kp KP_N7 &kp KP_N8 &kp KP_N9 &none &none &none
-            &none &none &kp LALT &kp LSHIFT &mt LCTRL FR_MINS &kp FR_PLUS                           &kp KP_N4 &mt RCTRL KP_N5 &mt RSHIFT KP_N6 &kp RALT &none &none
-            &none &none &none &none &kp KP_N0 &kp RET &trans &trans                                 &trans &trans &kp KP_N1 &kp KP_N2 &kp KP_N3 &none &none &none
-            &trans &trans &trans &trans &trans                                                  &trans &trans &trans &trans &trans
+            &none &none &none &none &kp FR_SLSH &kp KP_MULTIPLY                                     &none &kp KP_N7 &kp KP_N8 &kp KP_N9 &none &kp KP_NUMLOCK
+            &none &none &kp LALT &kp LSHIFT &mt LCTRL FR_MINS &kp FR_PLUS                           &none &hrm_ht LCTRL KP_N4 &hrm_ht RSHIFT KP_N5 &hrm_ht LALT KP_N6 &none &none 
+            &none &none &none &none &kp FR_COMM &kp FR_DOT &trans &trans                                 &trans &trans &none &kp KP_N1 &kp KP_N2 &kp KP_N3 &none &none 
+            &trans &trans &trans &trans &trans                                                  &trans &trans &kp KP_N0 &kp KP_N0 &kp KP_N0
             >;
 
             sensor-bindings = <&inc_dec_kp C_AL_PREV_TASK C_AL_NEXT_TASK &inc_dec_kp PG_UP PG_DN>;
@@ -234,99 +249,3 @@
         };
     };
 };
-/*
-// Row 1
-#define FR_SUP2 GRAVE   // ²
-#define FR_AMPR N1    // &
-#define FR_EACU N2    // é
-#define FR_DQUO N3    // "
-#define FR_QUOT N4    // '
-#define FR_LPRN N5    // (
-#define FR_MINS N6    // -
-#define FR_EGRV N7    // è
-#define FR_UNDS N8    // _
-#define FR_CCED N9    // ç
-#define FR_AGRV N0    // à
-#define FR_RPRN MINUS   // )
-#define FR_EQL  EQUAL   // =
-// Row 2
-#define FR_A    Q    // A
-#define FR_Z    W    // Z
-#define FR_E    E    // E
-#define FR_R    R    // R
-#define FR_T    T    // T
-#define FR_Y    Y    // Y
-#define FR_U    U    // U
-#define FR_I    I    // I
-#define FR_O    O    // O
-#define FR_P    P    // P
-#define FR_CIRC LBKT  // ^ (dead)
-#define FR_DLR  RBKT  // $
-// Row 3
-#define FR_Q    A    // Q
-#define FR_S    S    // S
-#define FR_D    D    // D
-#define FR_F    F    // F
-#define FR_G    G    // G
-#define FR_H    H    // H
-#define FR_J    J    // J
-#define FR_K    K    // K
-#define FR_L    L    // L
-#define FR_M    SEMI // M
-#define FR_UGRV SQT  // ù
-#define FR_ASTR STAR // *
-// Row 4
-#define FR_LABK STAR // <
-#define FR_W    Z    // W
-#define FR_X    X    // X
-#define FR_C    C    // C
-#define FR_V    V    // V
-#define FR_B    B    // B
-#define FR_N    N    // N
-#define FR_COMM M    // ,
-#define FR_SCLN COMMA // ;
-#define FR_COLN DOT   // :
-#define FR_EXLM SLASH  // !
-
-
-// Row 1
-#define FR_1    LS(FR_AMPR) // 1
-#define FR_2    LS(FR_EACU) // 2
-#define FR_3    LS(FR_DQUO) // 3
-#define FR_4    LS(FR_QUOT) // 4
-#define FR_5    LS(FR_LPRN) // 5
-#define FR_6    LS(FR_MINS) // 6
-#define FR_7    LS(FR_EGRV) // 7
-#define FR_8    LS(FR_UNDS) // 8
-#define FR_9    LS(FR_CCED) // 9
-#define FR_0    LS(FR_AGRV) // 0
-#define FR_DEG  LS(FR_RPRN) // °
-#define FR_PLUS LS(FR_EQL)  // +
-// Row 2
-#define FR_DIAE LS(FR_CIRC) // ¨ (dead)
-#define FR_PND  LS(FR_DLR)  // £
-// Row 3
-#define FR_PERC LS(FR_UGRV) // %
-#define FR_MICR LS(FR_ASTR) // µ
-// Row 4
-#define FR_RABK LS(FR_LABK) // >
-#define FR_QUES LS(FR_COMM) // ?
-#define FR_DOT  LS(FR_SCLN) // .
-#define FR_SLSH LS(FR_COLN) // /
-#define FR_SECT LS(FR_EXLM) // §
-
-// Row 1
-#define FR_TILD RA(FR_EACU) // ~ (dead)
-#define FR_HASH RA(FR_DQUO) // #
-#define FR_LCBR RA(FR_QUOT) // {
-#define FR_LBRC RA(FR_LPRN) // [
-#define FR_PIPE RA(FR_MINS) // |
-#define FR_GRV  RA(FR_EGRV) // ` (dead)
-#define FR_BSLS RA(FR_UNDS) // (backslash)
-#define FR_AT   RA(FR_AGRV) // @
-#define FR_RBRC RA(FR_RPRN) // ]
-#define FR_RCBR RA(FR_EQL)  // }
-// Row 2
-#define FR_EURO RA(E)   // €
-#define FR_CURR RA(FR_DLR) // ¤
-*/

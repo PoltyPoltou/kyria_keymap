@@ -1,13 +1,13 @@
 layers:
   AZERTY:
   - ESC
-  - A
+  - {t: A, h: à}
   - Z
   - E
   - R
   - T
   - Y
-  - U
+  - {t: U, h: ù}
   - I
   - O
   - P
@@ -23,125 +23,125 @@ layers:
   - {t: K, h: RSHIFT}
   - {t: L, h: LALT}
   - M
-  - ''
+  - '?'
   - '&td_caps'
   - W
   - X
   - C
   - V
   - B
-  - ''
-  - AC COPY
-  - AC PASTE
-  - ''
+  - CAPS
+  - '&copy_paste_cut'
+  - DEL
+  - PRINTSCREEN
+  - N
+  - é
+  - è
+  - '&td_quotes'
+  - {t: ., h: ':'}
+  - '!'
+  - LALT
+  - LGUI
+  - {t: LSHIFT, h: KEYPAD}
+  - {t: SPACE, h: NAV, s: _}
+  - ','
+  - ENTER
+  - {t: BSPC, h: FR}
+  - SYMBOL
+  - {t: LCTRL, h: sticky}
+  - DEVELOP
+  DEVELOP:
+  - ESC
+  - A
+  - Z
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '&not_dead FR_CIRC'
+  - TAB
+  - Q
+  - {t: S, h: LALT}
+  - {t: D, h: LSHIFT}
+  - {t: F, h: LCTRL}
+  - G
+  - H
+  - {t: J, h: RCTRL}
+  - {t: K, h: RSHIFT}
+  - {t: L, h: LALT}
+  - M
+  - '#'
+  - '&td_caps'
+  - W
+  - X
+  - C
+  - V
+  - B
+  - CAPS
+  - '&copy_paste_cut'
+  - DEL
+  - PRINTSCREEN
   - N
   - ','
   - ;
-  - ':'
-  - '!'
-  - RALT
-  - ''
+  - '&td_quotes'
+  - .
+  - {t: '!', h: '?'}
+  - LALT
   - LGUI
-  - {t: LSHIFT, h: NAV}
-  - {t: SPACE, h: LOWER, s: _}
-  - {t: DEL, h: KEYPAD}
+  - {t: LSHIFT, h: KEYPAD}
+  - {t: SPACE, h: NAV, s: _}
+  - ':'
   - ENTER
-  - {t: BSPC, h: FR}
-  - {t: BSPC, h: UPPER}
-  - RGUI
-  - AL NEXT TASK
-  LOWER:
+  - {t: BSPC, h: SYMBOL}
+  - {t: /, h: \}
+  - {t: LCTRL, h: sticky}
+  - DEVELOP
+  SYMBOL:
   - £
   - '@'
-  - '|'
-  - '-'
+  - <
   - (
-  - '|'
-  - LS(NON US BSLH)
   - )
-  - '"'
-  - +
-  - ¤
-  - ''
-  - €
-  - '#'
-  - {t: '&', h: LALT}
-  - {t: _, h: LSHIFT}
-  - {t: '[', h: LCTRL}
-  - '*'
-  - '?'
-  - {t: ']', h: RCTRL}
-  - {t: '''', h: RSHIFT}
-  - {t: '-', h: LALT}
-  - '`'
-  - ''
-  - $
-  - ''
+  - '>'
+  - '|'
+  - '['
+  - ']'
   - '~'
   - ''
-  - '{'
-  - \
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - /
-  - '}'
-  - '%'
+  - ¤
+  - €
+  - ''
+  - {t: $, h: LALT}
+  - {t: '-', h: LSHIFT}
+  - {t: _, h: LCTRL}
   - '='
+  - '%'
+  - {t: '*', h: RCTRL}
+  - {t: +, h: RSHIFT}
+  - {t: '&', h: LALT}
+  - ''
+  - '&not_dead FR_GRV'
+  - ''
+  - ''
+  - '0'
+  - '{'
+  - '}'
+  - '&td_nb'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - §
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  UPPER:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -154,15 +154,15 @@ layers:
   - {t: ▽, type: trans}
   FR:
   - ''
-  - à
-  - '&a_circ'
-  - é
-  - è
-  - '&e_circ'
-  - ù
-  - '&u_circ'
-  - '&i_circ'
-  - '&o_circ'
+  - {t: '&circ FR_A', h: '&trema FR_A'}
+  - ''
+  - {t: '&circ E', h: '&trema E'}
+  - ''
+  - ''
+  - ''
+  - '&circ U'
+  - {t: '&circ I', h: '&trema I'}
+  - '&circ O'
   - ''
   - ''
   - ''
@@ -171,24 +171,24 @@ layers:
   - ''
   - ''
   - ''
-  - .
-  - '!'
-  - '?'
-  - '&i_trema'
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
   - ''
   - ''
   - ç
+  - ^
+  - ¨
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ','
-  - ''''
   - ''
   - ''
   - ''
@@ -204,28 +204,28 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NAV:
-  - ''
+  - LA(F4)
   - ''
   - F1
   - F2
   - F3
   - F4
+  - ''
   - PG UP
   - UP
   - PG DN
   - ''
-  - ''
-  - ''
+  - LA(F4)
   - ''
   - ''
   - {t: F5, h: LALT}
   - {t: F6, h: LSHIFT}
   - {t: F7, h: LCTRL}
   - F8
-  - LEFT
-  - {t: DOWN, h: RCTRL}
-  - {t: RIGHT, h: RSHIFT}
-  - LALT
+  - ''
+  - {t: LEFT, h: LCTRL}
+  - {t: DOWN, h: RSHIFT}
+  - {t: RIGHT, h: LALT}
   - ''
   - ''
   - ''
@@ -238,16 +238,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - ''
   - HOME
   - ''
   - END
   - ''
   - ''
-  - ''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -261,42 +261,40 @@ layers:
   - ''
   - /
   - '*'
+  - ''
   - KP 7
   - KP 8
   - KP 9
   - ''
-  - ''
-  - ''
+  - KP NUMLOCK
   - ''
   - ''
   - LALT
   - LSHIFT
   - {t: '-', h: LCTRL}
   - +
-  - KP 4
-  - {t: KP 5, h: RCTRL}
-  - {t: KP 6, h: RSHIFT}
-  - RALT
+  - ''
+  - {t: KP 4, h: LCTRL}
+  - {t: KP 5, h: RSHIFT}
+  - {t: KP 6, h: LALT}
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - KP 0
-  - ENTER
+  - ','
+  - .
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - ''
   - KP 1
   - KP 2
   - KP 3
   - ''
   - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -304,7 +302,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - KP 0
+  - KP 0
+  - KP 0
   SYS:
   - BT CLR
   - ''
@@ -359,3 +359,4 @@ layers:
 combos:
 - p: [40, 49]
   k: {t: SYS, h: sticky}
+  l: [AZERTY, DEVELOP]
