@@ -13,7 +13,7 @@ layers:
   - P
   - ^
   - TAB
-  - Q
+  - {t: Q, h: LGUI}
   - {t: S, h: LALT}
   - {t: D, h: LSHIFT}
   - {t: F, h: LCTRL}
@@ -23,7 +23,7 @@ layers:
   - {t: K, h: RSHIFT}
   - {t: L, h: LALT}
   - M
-  - '?'
+  - {t: ',', h: ':'}
   - '&td_caps'
   - W
   - X
@@ -38,69 +38,69 @@ layers:
   - é
   - è
   - '&td_quotes'
-  - {t: ., h: ':'}
-  - '!'
-  - LALT
-  - LGUI
-  - {t: LSHIFT, h: KEYPAD}
-  - {t: SPACE, h: NAV, s: _}
-  - ','
-  - ENTER
-  - {t: BSPC, h: FR}
-  - SYMBOL
-  - {t: LCTRL, h: sticky}
-  - DEVELOP
-  DEVELOP:
-  - ESC
-  - A
-  - Z
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - '&not_dead FR_CIRC'
-  - TAB
-  - Q
-  - {t: S, h: LALT}
-  - {t: D, h: LSHIFT}
-  - {t: F, h: LCTRL}
-  - G
-  - H
-  - {t: J, h: RCTRL}
-  - {t: K, h: RSHIFT}
-  - {t: L, h: LALT}
-  - M
-  - '#'
-  - '&td_caps'
-  - W
-  - X
-  - C
-  - V
-  - B
-  - CAPS
-  - '&copy_paste_cut'
-  - DEL
-  - PRINTSCREEN
-  - N
-  - ','
-  - ;
-  - '&td_quotes'
   - .
   - {t: '!', h: '?'}
   - LALT
-  - LGUI
+  - ''
   - {t: LSHIFT, h: KEYPAD}
   - {t: SPACE, h: NAV, s: _}
-  - ':'
-  - ENTER
-  - {t: BSPC, h: SYMBOL}
-  - {t: /, h: \}
+  - {t: SYMBOL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: BSPC, h: FR}
   - {t: LCTRL, h: sticky}
-  - DEVELOP
+  - LGUI
+  - '&td_layers'
+  DEVELOP:
+  - {t: ▽, type: trans}
+  - A
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - U
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: /, h: \}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ':'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ','
+  - ;
+  - '"'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   SYMBOL:
   - £
   - '@'
@@ -111,17 +111,17 @@ layers:
   - '|'
   - '['
   - ']'
-  - '~'
+  - '&not_dead FR_TILD'
   - ''
   - ¤
   - €
-  - ''
+  - '#'
   - {t: $, h: LALT}
   - {t: '-', h: LSHIFT}
   - {t: _, h: LCTRL}
-  - '='
   - '%'
-  - {t: '*', h: RCTRL}
+  - ''''
+  - {t: '=', h: RCTRL}
   - {t: +, h: RSHIFT}
   - {t: '&', h: LALT}
   - ''
@@ -146,10 +146,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   FR:
@@ -164,6 +164,7 @@ layers:
   - {t: '&circ I', h: '&trema I'}
   - '&circ O'
   - ''
+  - ^
   - ''
   - ''
   - ''
@@ -175,24 +176,23 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - {t: ',', h: ':'}
   - ''
   - ''
   - ''
   - ç
-  - ^
-  - ¨
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - é
+  - è
+  - '&td_quotes'
+  - .
+  - {t: '!', h: '?'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -211,20 +211,20 @@ layers:
   - F3
   - F4
   - ''
-  - PG UP
-  - UP
   - PG DN
+  - PG UP
+  - ''
   - ''
   - LA(F4)
-  - ''
-  - ''
+  - ENTER
+  - ENTER
   - {t: F5, h: LALT}
   - {t: F6, h: LSHIFT}
   - {t: F7, h: LCTRL}
   - F8
-  - ''
-  - {t: LEFT, h: LCTRL}
-  - {t: DOWN, h: RSHIFT}
+  - LEFT
+  - {t: DOWN, h: LCTRL}
+  - {t: UP, h: RSHIFT}
   - {t: RIGHT, h: LALT}
   - ''
   - ''
@@ -240,8 +240,8 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - HOME
-  - ''
   - END
+  - ''
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -356,6 +356,57 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  GAMING:
+  - ESC
+  - ''
+  - A
+  - Z
+  - E
+  - R
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '&not_dead FR_CIRC'
+  - LSHIFT
+  - TAB
+  - Q
+  - S
+  - D
+  - F
+  - H
+  - {t: J, h: RCTRL}
+  - {t: K, h: RSHIFT}
+  - {t: L, h: LALT}
+  - M
+  - '#'
+  - LCTRL
+  - ''
+  - W
+  - X
+  - C
+  - V
+  - CAPS
+  - '&copy_paste_cut'
+  - DEL
+  - PRINTSCREEN
+  - N
+  - ','
+  - ;
+  - '&td_quotes'
+  - .
+  - {t: '!', h: '?'}
+  - LALT
+  - LGUI
+  - {t: LSHIFT, h: KEYPAD}
+  - {t: SPACE, h: NAV, s: _}
+  - ':'
+  - ENTER
+  - {t: BSPC, h: SYMBOL}
+  - {t: /, h: \}
+  - {t: LCTRL, h: sticky}
+  - '&td_layers'
 combos:
 - p: [40, 49]
   k: {t: SYS, h: sticky}

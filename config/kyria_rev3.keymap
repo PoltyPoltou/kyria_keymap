@@ -17,9 +17,18 @@
 #define NAV 4
 #define KEYPAD 5
 #define SYS 6
+#define GAMING 7
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SPACE>;
+};
+
+&sk {
+    release-after-ms = <1000>;
+};
+
+&sl {
+    release-after-ms = <3000>;
 };
 
 / {
@@ -115,6 +124,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp KP_N1>,<&kp KP_N2>,<&kp KP_N3>,<&kp KP_N4>,<&kp KP_N5>,<&kp KP_N5>,<&kp KP_N6>,<&kp KP_N7>,<&kp KP_N8>,<&kp KP_N9>;
         };
+        td_layers: td_layers {
+            compatible = "zmk,behavior-tap-dance";
+            label = "td for dev and gaming";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tog DEVELOP>, <&tog GAMING>;
+        };
         td_quotes: td_quotes {
             compatible = "zmk,behavior-tap-dance";
             label = "quotes tapdance";
@@ -125,7 +141,7 @@
         combos {
             compatible = "zmk,combos";
             system {
-                timeout-ms = <200>;
+                timeout-ms = <500>;
                 key-positions = <40 49>;
                 bindings = <&sl SYS>;
                 layers = <AZERTY DEVELOP>;
@@ -174,9 +190,9 @@
         AZERTY_layer {
             bindings = <
             &kp ESC &accent_ht FR_AGRV FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T                                  &kp FR_Y &accent_ht FR_UGRV FR_U &kp FR_I &kp FR_O &kp FR_P &kp FR_CIRC
-            &kp TAB &kp FR_Q &hrm_ht LALT FR_S &hrm_ht LSHIFT FR_D &hrm_ht LCTRL FR_F &kp FR_G             &kp FR_H &hrm_ht RCTRL FR_J &hrm_ht RSHIFT FR_K &hrm_ht LALT FR_L &kp FR_M &kp FR_QUES
-            &td_caps &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B &kp CAPS &copy_paste_cut             &kp DEL &kp PRINTSCREEN &kp FR_N &kp FR_EACU &kp FR_EGRV &td_quotes &cust_ht FR_COLN FR_DOT &kp FR_EXLM
-            &kp LALT &kp LGUI &sl_ht KEYPAD LSHIFT &mrphlt NAV 0 &kp FR_COMM                               &kp RET &cust_mt FR BSPC &mo SYMBOL &sk LCTRL &tog DEVELOP
+            &kp TAB &hrm_ht LGUI FR_Q &hrm_ht LALT FR_S &hrm_ht LSHIFT FR_D &hrm_ht LCTRL FR_F &kp FR_G             &kp FR_H &hrm_ht RCTRL FR_J &hrm_ht RSHIFT FR_K &hrm_ht LALT FR_L &kp FR_M &cust_ht FR_COLN FR_COMM
+            &td_caps &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B &kp CAPS &copy_paste_cut             &kp DEL &kp PRINTSCREEN &kp FR_N &kp FR_EACU &kp FR_EGRV &td_quotes &kp FR_DOT &cust_ht FR_QUES FR_EXLM
+            &kp LALT &none &sl_ht KEYPAD LSHIFT &mrphlt NAV 0 &sl SYMBOL                               &sk LALT &cust_mt FR BSPC &sk LCTRL &kp LGUI &td_layers
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
@@ -185,10 +201,10 @@
 
         DEVELOP_layer {
             bindings = <
-            &kp ESC &kp FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T                                  &kp FR_Y &kp FR_U &kp FR_I &kp FR_O &kp FR_P &not_dead FR_CIRC
-            &kp TAB &kp FR_Q &hrm_ht LALT FR_S &hrm_ht LSHIFT FR_D &hrm_ht LCTRL FR_F &kp FR_G             &kp FR_H &hrm_ht RCTRL FR_J &hrm_ht RSHIFT FR_K &hrm_ht LALT FR_L &kp FR_M &kp FR_HASH
-            &td_caps &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B &kp CAPS &copy_paste_cut             &kp DEL &kp PRINTSCREEN &kp FR_N &kp FR_COMM &kp FR_SCLN &td_quotes &kp FR_DOT &cust_ht FR_QUES FR_EXLM
-            &kp LALT &kp LGUI &sl_ht KEYPAD LSHIFT &mrphlt NAV 0 &kp FR_COLN                               &kp RET &cust_mt SYMBOL BSPC &cust_ht FR_BSLS FR_SLSH &sk LCTRL &tog DEVELOP
+            &trans &kp FR_A &trans &trans &trans &trans                                   &trans &kp FR_U &trans &trans &trans &cust_ht FR_BSLS FR_SLSH
+            &trans &trans &trans &trans &trans &trans                                   &trans &trans &trans &trans &trans &kp FR_COLN
+            &trans &trans &trans &trans &trans &trans &trans &trans      &trans &trans &trans &kp FR_COMM &kp FR_SCLN &kp FR_DQUO &trans &trans
+                            &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
 
@@ -196,8 +212,8 @@
 
         SYMBOL_layer {
             bindings = <
-            &kp FR_PND &kp FR_AT &kp FR_LABK &kp FR_LPRN &kp FR_RPRN &kp FR_RABK                                                    &kp FR_PIPE &kp FR_LBRC &kp FR_RBRC &kp FR_TILD &none &kp FR_CURR
-            &kp FR_EURO &none &hrm_ht LALT FR_DLR &hrm_ht LSHIFT FR_MINS &hrm_ht LCTRL FR_UNDS &kp FR_EQL        		&kp FR_PERC &hrm_ht RCTRL KP_MULTIPLY &hrm_ht RSHIFT FR_PLUS &hrm_ht LALT FR_AMPR &none &not_dead FR_GRV
+            &kp FR_PND &kp FR_AT &kp FR_LABK &kp FR_LPRN &kp FR_RPRN &kp FR_RABK                                                    &kp FR_PIPE &kp FR_LBRC &kp FR_RBRC &not_dead FR_TILD &none &kp FR_CURR
+            &kp FR_EURO &kp FR_HASH &hrm_ht LALT FR_DLR &hrm_ht LSHIFT FR_MINS &hrm_ht LCTRL FR_UNDS &kp FR_PERC        		&kp FR_QUOT &hrm_ht RCTRL FR_EQL &hrm_ht RSHIFT FR_PLUS &hrm_ht LALT FR_AMPR &none &not_dead FR_GRV
             &none &none &kp FR_0 &kp FR_LCBR &kp FR_RCBR &td_nb &trans &trans                                                       &trans &trans &none &none &none &none &none &kp FR_SECT
             &trans &trans &trans &trans &trans                                                                                      &trans &trans &trans &trans &trans
             >;
@@ -207,9 +223,9 @@
 
         FR_layer {
             bindings = <
-            &none &circ_ht FR_A FR_A &none &circ_ht E E &none &none                &none &circ U &circ_ht I I &circ O &none &none
-            &none &none &none &none &none &none 				   &none &none &none &none &none &none
-            &none &none &none &kp FR_CCED &kp FR_CIRC &kp FR_DIAE &trans &trans    &trans &trans &none &none &none &none &none &none
+            &none &circ_ht FR_A FR_A &none &circ_ht E E &none &none                &none &circ U &circ_ht I I &circ O &none &kp FR_CIRC
+            &none &none &none &none &none &none 				   &none &none &none &none &none &cust_ht FR_COLN FR_COMM
+            &none &none &none &kp FR_CCED &none &none &trans &trans    &trans &trans &none &kp FR_EACU &kp FR_EGRV &td_quotes &kp FR_DOT &cust_ht FR_QUES FR_EXLM
             &trans &trans &trans &trans &trans                                     &trans &trans &trans &trans &trans
             >;
 
@@ -218,9 +234,9 @@
 
         NAV_layer {
             bindings = <
-            &kp LA(F4) &none &kp F1 &kp F2 &kp F3 &kp F4                                 &none &kp PG_UP &kp UP &kp PG_DN &none &kp LA(F4)
-            &none &none &hrm_ht LALT F5 &hrm_ht LSHIFT F6 &hrm_ht LCTRL F7 &kp F8   &none &hrm_ht LCTRL LEFT &hrm_ht RSHIFT DOWN &hrm_ht LALT RIGHT &none &none
-            &none &none &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans                &trans &trans &none &kp HOME &none &kp END &none &none
+            &kp LA(F4) &none &kp F1 &kp F2 &kp F3 &kp F4                                 &none &kp PG_DN &kp PG_UP &none &none &kp LA(F4)
+            &kp ENTER &kp ENTER &hrm_ht LALT F5 &hrm_ht LSHIFT F6 &hrm_ht LCTRL F7 &kp F8   &kp LEFT &hrm_ht LCTRL DOWN &hrm_ht RSHIFT UP &hrm_ht LALT RIGHT &none &none
+            &none &none &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans                &trans &trans &none &kp HOME &kp END &none &none &none
             &trans &trans &trans &trans &trans                                      &trans &trans &trans &trans &trans
             >;
 
@@ -246,6 +262,16 @@
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+        };
+        GAMING_layer {
+            bindings = <
+            &kp ESC &none &kp FR_A &kp FR_Z &kp FR_E &kp FR_R                                   &kp FR_Y &kp FR_U &kp FR_I &kp FR_O &kp FR_P &not_dead FR_CIRC
+            &kp LSHIFT &kp TAB &kp FR_Q &kp FR_S &kp FR_D &kp FR_F              &kp FR_H &hrm_ht RCTRL FR_J &hrm_ht RSHIFT FR_K &hrm_ht LALT FR_L &kp FR_M &kp FR_HASH
+            &kp LCTRL &none &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp CAPS &copy_paste_cut             &kp DEL &kp PRINTSCREEN &kp FR_N &kp FR_COMM &kp FR_SCLN &td_quotes &kp FR_DOT &cust_ht FR_QUES FR_EXLM
+            &kp LALT &kp LGUI &sl_ht KEYPAD LSHIFT &mrphlt NAV 0 &kp FR_COLN                               &kp RET &cust_mt SYMBOL BSPC &cust_ht FR_BSLS FR_SLSH &sk LCTRL &td_layers
+            >;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
+
         };
     };
 };
