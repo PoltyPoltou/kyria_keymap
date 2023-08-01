@@ -13,7 +13,7 @@ layers:
   - P
   - ^
   - TAB
-  - {t: Q, h: LGUI}
+  - Q
   - {t: S, h: LALT}
   - {t: D, h: LSHIFT}
   - {t: F, h: LCTRL}
@@ -41,11 +41,11 @@ layers:
   - .
   - {t: '!', h: '?'}
   - LALT
-  - ''
+  - {t: LCTRL, h: sticky}
   - {t: LSHIFT, h: KEYPAD}
-  - {t: SPACE, h: NAV, s: _}
+  - {t: SPACE, s: _}
+  - {t: NAV, h: sticky}
   - {t: SYMBOL, h: sticky}
-  - {t: LALT, h: sticky}
   - {t: BSPC, h: FR}
   - {t: LCTRL, h: sticky}
   - LGUI
@@ -111,43 +111,43 @@ layers:
   - '|'
   - '['
   - ']'
-  - '&not_dead FR_TILD'
-  - ''
-  - ¤
+  - '~'
+  - '%'
+  - '*'
   - €
   - '#'
   - {t: $, h: LALT}
   - {t: '-', h: LSHIFT}
   - {t: _, h: LCTRL}
-  - '%'
-  - ''''
+  - '{'
+  - '}'
   - {t: '=', h: RCTRL}
   - {t: +, h: RSHIFT}
   - {t: '&', h: LALT}
-  - ''
+  - ''''
   - '&not_dead FR_GRV'
-  - ''
-  - ''
+  - ','
+  - '5'
+  - '4'
+  - '3'
+  - '2'
+  - '1'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '0'
-  - '{'
-  - '}'
-  - '&td_nb'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - .
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - §
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -204,19 +204,19 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NAV:
-  - LA(F4)
+  - ''
   - ''
   - F1
   - F2
   - F3
   - F4
-  - ''
+  - HOME
   - PG DN
   - PG UP
-  - ''
+  - END
   - ''
   - LA(F4)
-  - ENTER
+  - ''
   - ENTER
   - {t: F5, h: LALT}
   - {t: F6, h: LSHIFT}
@@ -229,7 +229,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {t: LALT, h: sticky}
   - F9
   - F10
   - F11
@@ -238,17 +238,17 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: LCTRL, h: sticky}
+  - {t: LSHIFT, h: sticky}
+  - {t: LALT, h: sticky}
   - ''
-  - HOME
-  - END
   - ''
   - ''
-  - ''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
