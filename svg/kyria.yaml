@@ -31,34 +31,34 @@ layers:
   - V
   - B
   - CAPS
-  - '&copy_paste_cut'
+  - {t: LALT, h: sticky}
   - DEL
   - PRINTSCREEN
   - N
   - é
   - è
   - '&td_quotes'
-  - .
+  - {t: ., h: ;}
   - {t: '!', h: '?'}
-  - LALT
+  - {t: LALT, h: sticky}
   - {t: LCTRL, h: sticky}
-  - {t: LSHIFT, h: KEYPAD}
+  - {t: LSHIFT, h: sticky}
   - {t: SPACE, s: _}
-  - {t: NAV, h: sticky}
-  - {t: SYMBOL, h: sticky}
+  - NAV
+  - SYMBOL
   - {t: BSPC, h: FR}
   - {t: LCTRL, h: sticky}
   - LGUI
   - '&td_layers'
   DEVELOP:
   - {t: ▽, type: trans}
-  - A
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - U
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -127,20 +127,20 @@ layers:
   - ''''
   - '&not_dead FR_GRV'
   - ','
-  - '5'
-  - '4'
-  - '3'
-  - '2'
   - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '0'
   - '6'
   - '7'
   - '8'
   - '9'
+  - '0'
   - .
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -210,13 +210,13 @@ layers:
   - F2
   - F3
   - F4
-  - HOME
-  - PG DN
-  - PG UP
-  - END
   - ''
-  - LA(F4)
   - ''
+  - ''
+  - ''
+  - ''
+  - PP
+  - '&alt_tab'
   - ENTER
   - {t: F5, h: LALT}
   - {t: F6, h: LSHIFT}
@@ -227,7 +227,7 @@ layers:
   - {t: UP, h: RSHIFT}
   - {t: RIGHT, h: LALT}
   - ''
-  - ''
+  - NEXT
   - ''
   - {t: LALT, h: sticky}
   - F9
@@ -238,12 +238,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: LCTRL, h: sticky}
-  - {t: LSHIFT, h: sticky}
-  - {t: LALT, h: sticky}
+  - HOME
+  - PG DN
+  - PG UP
+  - END
   - ''
-  - ''
-  - ''
+  - PREV
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -297,7 +297,7 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -410,4 +410,13 @@ layers:
 combos:
 - p: [40, 49]
   k: {t: SYS, h: sticky}
+  l: [AZERTY, DEVELOP]
+- p: [0, 1]
+  k: BT 0
+  l: [AZERTY, DEVELOP]
+- p: [12, 13]
+  k: BT 1
+  l: [AZERTY, DEVELOP]
+- p: [24, 25]
+  k: BT 2
   l: [AZERTY, DEVELOP]
