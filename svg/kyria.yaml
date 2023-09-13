@@ -49,7 +49,7 @@ layers:
   - {t: BSPC, h: FR}
   - {t: LCTRL, h: sticky}
   - LGUI
-  - '&td_layers'
+  - {t: DEVELOP, h: GAMING}
   DEVELOP:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -101,6 +101,57 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  GAMING:
+  - ESC
+  - ''
+  - A
+  - Z
+  - E
+  - R
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '&not_dead FR_CIRC'
+  - TAB
+  - LSHIFT
+  - Q
+  - S
+  - D
+  - F
+  - H
+  - J
+  - K
+  - L
+  - M
+  - '#'
+  - ''
+  - LCTRL
+  - W
+  - X
+  - C
+  - V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - DEL
+  - PRINTSCREEN
+  - N
+  - ','
+  - ;
+  - '&td_quotes'
+  - .
+  - {t: '!', h: '?'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - SPACE
+  - SPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - AZERTY
   SYMBOL:
   - £
   - '@'
@@ -211,9 +262,9 @@ layers:
   - F3
   - F4
   - ''
-  - ''
-  - ''
-  - ''
+  - RCTRL
+  - RSHIFT
+  - LALT
   - ''
   - PP
   - '&alt_tab'
@@ -223,9 +274,9 @@ layers:
   - {t: F7, h: LCTRL}
   - F8
   - LEFT
-  - {t: DOWN, h: LCTRL}
-  - {t: UP, h: RSHIFT}
-  - {t: RIGHT, h: LALT}
+  - DOWN
+  - UP
+  - RIGHT
   - ''
   - NEXT
   - ''
@@ -356,67 +407,24 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  GAMING:
-  - ESC
-  - ''
-  - A
-  - Z
-  - E
-  - R
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - '&not_dead FR_CIRC'
-  - LSHIFT
-  - TAB
-  - Q
-  - S
-  - D
-  - F
-  - H
-  - {t: J, h: RCTRL}
-  - {t: K, h: RSHIFT}
-  - {t: L, h: LALT}
-  - M
-  - '#'
-  - LCTRL
-  - ''
-  - W
-  - X
-  - C
-  - V
-  - CAPS
-  - '&copy_paste_cut'
-  - DEL
-  - PRINTSCREEN
-  - N
-  - ','
-  - ;
-  - '&td_quotes'
-  - .
-  - {t: '!', h: '?'}
-  - LALT
-  - LGUI
-  - {t: LSHIFT, h: KEYPAD}
-  - {t: SPACE, h: NAV, s: _}
-  - ':'
-  - ENTER
-  - {t: BSPC, h: SYMBOL}
-  - {t: /, h: \}
-  - {t: LCTRL, h: sticky}
-  - '&td_layers'
+  SWITCH: ['&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch',
+    '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch',
+    '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', LS(TAB), '&end_switch',
+    '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch',
+    TAB, '&end_switch', LCTRL, '&end_switch', '&end_switch', '&end_switch']
 combos:
 - p: [40, 49]
   k: {t: SYS, h: sticky}
   l: [AZERTY, DEVELOP]
-- p: [0, 1]
+- p: [0, 1, 2]
   k: BT 0
   l: [AZERTY, DEVELOP]
-- p: [12, 13]
+- p: [12, 13, 14]
   k: BT 1
   l: [AZERTY, DEVELOP]
-- p: [24, 25]
+- p: [24, 25, 26]
   k: BT 2
+  l: [AZERTY, DEVELOP]
+- p: [31, 44]
+  k: '&alt_tab_macro_hold'
   l: [AZERTY, DEVELOP]
