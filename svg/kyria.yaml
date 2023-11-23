@@ -1,5 +1,5 @@
 layers:
-  AZERTY:
+  DEVELOP:
   - ESC
   - {t: A, h: à}
   - Z
@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - ^
+  - {t: /, h: \}
   - TAB
   - Q
   - {t: S, h: LALT}
@@ -23,7 +23,7 @@ layers:
   - {t: K, h: RSHIFT}
   - {t: L, h: LALT}
   - M
-  - {t: ',', h: ':'}
+  - ':'
   - '&td_caps'
   - W
   - X
@@ -31,26 +31,26 @@ layers:
   - V
   - B
   - CAPS
-  - {t: LALT, h: sticky}
+  - ''
   - DEL
   - PRINTSCREEN
   - N
-  - é
-  - è
-  - '&td_quotes'
+  - ','
+  - ;
+  - '"'
   - {t: ., h: ;}
   - {t: '!', h: '?'}
   - {t: LALT, h: sticky}
   - {t: LCTRL, h: sticky}
   - {t: LSHIFT, h: sticky}
   - {t: SPACE, s: _}
-  - NAV
+  - '&nav_macro'
   - SYMBOL
   - {t: BSPC, h: FR}
   - {t: LCTRL, h: sticky}
   - LGUI
   - {t: DEVELOP, h: GAMING}
-  DEVELOP:
+  AZERTY:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -62,7 +62,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: /, h: \}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -74,7 +73,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ':'
+  - {t: ▽, type: trans}
+  - {t: ',', h: ':'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -86,9 +86,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ','
-  - ;
-  - '"'
+  - é
+  - è
+  - '&td_quotes'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -151,9 +151,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - AZERTY
+  - DEVELOP
   SYMBOL:
-  - £
+  - KEYPAD
   - '@'
   - <
   - (
@@ -162,9 +162,9 @@ layers:
   - '|'
   - '['
   - ']'
-  - '~'
-  - '%'
   - '*'
+  - '%'
+  - '&not_dead FR_CIRC'
   - €
   - '#'
   - {t: $, h: LALT}
@@ -192,7 +192,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - .
+  - '~'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -267,7 +267,7 @@ layers:
   - LALT
   - ''
   - PP
-  - '&alt_tab'
+  - '&tog_alt_nav TAB'
   - ENTER
   - {t: F5, h: LALT}
   - {t: F6, h: LSHIFT}
@@ -279,7 +279,7 @@ layers:
   - RIGHT
   - ''
   - NEXT
-  - ''
+  - '&tog_alt_nav LS(TAB)'
   - {t: LALT, h: sticky}
   - F9
   - F10
@@ -299,14 +299,65 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  ALT_TAB_NAV:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LS(TAB)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   KEYPAD:
-  - ''
+  - KEYPAD
   - ''
   - ''
   - ''
@@ -407,11 +458,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  SWITCH: ['&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch',
-    '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch',
-    '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', LS(TAB), '&end_switch',
-    '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch', '&end_switch',
-    TAB, '&end_switch', LCTRL, '&end_switch', '&end_switch', '&end_switch']
 combos:
 - p: [40, 49]
   k: {t: SYS, h: sticky}
@@ -424,7 +470,4 @@ combos:
   l: [AZERTY, DEVELOP]
 - p: [24, 25, 26]
   k: BT 2
-  l: [AZERTY, DEVELOP]
-- p: [31, 44]
-  k: '&alt_tab_macro_hold'
   l: [AZERTY, DEVELOP]
