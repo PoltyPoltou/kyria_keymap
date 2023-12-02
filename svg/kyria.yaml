@@ -40,7 +40,7 @@ layers:
   - '"'
   - {t: ., h: ;}
   - {t: '!', h: '?'}
-  - {t: LALT, h: sticky}
+  - {t: AZERTY, h: GAMING}
   - {t: LCTRL, h: sticky}
   - {t: LSHIFT, h: sticky}
   - {t: SPACE, s: _}
@@ -49,7 +49,7 @@ layers:
   - {t: BSPC, h: FR}
   - {t: LCTRL, h: sticky}
   - LGUI
-  - {t: DEVELOP, h: GAMING}
+  - {t: AZERTY, h: GAMING}
   AZERTY:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -103,7 +103,7 @@ layers:
   - {t: ▽, type: trans}
   GAMING:
   - ESC
-  - ''
+  - T
   - A
   - Z
   - E
@@ -126,14 +126,14 @@ layers:
   - L
   - M
   - '#'
-  - ''
+  - T
   - LCTRL
   - W
   - X
   - C
   - V
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LALT
   - DEL
   - PRINTSCREEN
   - N
@@ -142,9 +142,9 @@ layers:
   - '&td_quotes'
   - .
   - {t: '!', h: '?'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - SPACE
+  - DEVELOP
+  - LCTRL
+  - LSHIFT
   - SPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

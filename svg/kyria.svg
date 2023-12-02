@@ -186,8 +186,8 @@ path.combo {
 <text x="830.0" y="218.5" class="tap">!</text>
 <text x="830.0" y="239.5" class="hold">?</text>
 <rect rx="0.0" ry="0.0" x="157.0" y="220.5" width="46.0" height="46.0" class="key"/>
-<text x="180.0" y="243.5" class="tap">LALT</text>
-<text x="180.0" y="264.5" class="hold">sticky</text>
+<text x="180.0" y="243.5" class="tap">AZERTY</text>
+<text x="180.0" y="264.5" class="hold">GAMING</text>
 <rect rx="0.0" ry="0.0" x="207.0" y="220.5" width="46.0" height="46.0" class="key"/>
 <text x="230.0" y="243.5" class="tap">LCTRL</text>
 <text x="230.0" y="264.5" class="hold">sticky</text>
@@ -210,7 +210,7 @@ path.combo {
 <rect rx="0.0" ry="0.0" x="632.0" y="220.5" width="46.0" height="46.0" class="key"/>
 <text x="655.0" y="243.5" class="tap">LGUI</text>
 <rect rx="0.0" ry="0.0" x="682.0" y="220.5" width="46.0" height="46.0" class="key"/>
-<text x="705.0" y="243.5" class="tap">DEVELOP</text>
+<text x="705.0" y="243.5" class="tap">AZERTY</text>
 <text x="705.0" y="264.5" class="hold">GAMING</text>
 <path d="M442.5,243.5 l-245.83333333333334,0.0" class="combo"/>
 <path d="M442.5,243.5 l245.83333333333334,0.0" class="combo"/>
@@ -362,6 +362,7 @@ path.combo {
 <rect rx="0.0" ry="0.0" x="32.0" y="732.5" width="46.0" height="46.0" class="key"/>
 <text x="55.0" y="755.5" class="tap">ESC</text>
 <rect rx="0.0" ry="0.0" x="82.0" y="732.5" width="46.0" height="46.0" class="key"/>
+<text x="105.0" y="755.5" class="tap">T</text>
 <rect rx="0.0" ry="0.0" x="132.0" y="707.5" width="46.0" height="46.0" class="key"/>
 <text x="155.0" y="730.5" class="tap">A</text>
 <rect rx="0.0" ry="0.0" x="182.0" y="695.0" width="46.0" height="46.0" class="key"/>
@@ -408,6 +409,7 @@ path.combo {
 <rect rx="0.0" ry="0.0" x="807.0" y="782.5" width="46.0" height="46.0" class="key"/>
 <text x="830.0" y="805.5" class="tap">#</text>
 <rect rx="0.0" ry="0.0" x="32.0" y="832.5" width="46.0" height="46.0" class="key"/>
+<text x="55.0" y="855.5" class="tap">T</text>
 <rect rx="0.0" ry="0.0" x="82.0" y="832.5" width="46.0" height="46.0" class="key"/>
 <text x="105.0" y="855.5" class="tap">LCTRL</text>
 <rect rx="0.0" ry="0.0" x="132.0" y="807.5" width="46.0" height="46.0" class="key"/>
@@ -420,8 +422,8 @@ path.combo {
 <text x="305.0" y="843.0" class="tap">V</text>
 <rect rx="0.0" ry="0.0" x="332.0" y="845.0" width="46.0" height="46.0" class="trans key"/>
 <text x="355.0" y="868.0" class="trans tap">▽</text>
-<rect rx="0.0" ry="0.0" x="382.0" y="857.5" width="46.0" height="46.0" class="trans key"/>
-<text x="405.0" y="880.5" class="trans tap">▽</text>
+<rect rx="0.0" ry="0.0" x="382.0" y="857.5" width="46.0" height="46.0" class="key"/>
+<text x="405.0" y="880.5" class="tap">LALT</text>
 <rect rx="0.0" ry="0.0" x="457.0" y="857.5" width="46.0" height="46.0" class="key"/>
 <text x="480.0" y="880.5" class="tap">DEL</text>
 <rect rx="0.0" ry="0.0" x="507.0" y="845.0" width="46.0" height="46.0" class="key"/>
@@ -439,12 +441,12 @@ path.combo {
 <rect rx="0.0" ry="0.0" x="807.0" y="832.5" width="46.0" height="46.0" class="key"/>
 <text x="830.0" y="855.5" class="tap">!</text>
 <text x="830.0" y="876.5" class="hold">?</text>
-<rect rx="0.0" ry="0.0" x="157.0" y="857.5" width="46.0" height="46.0" class="trans key"/>
-<text x="180.0" y="880.5" class="trans tap">▽</text>
-<rect rx="0.0" ry="0.0" x="207.0" y="857.5" width="46.0" height="46.0" class="trans key"/>
-<text x="230.0" y="880.5" class="trans tap">▽</text>
+<rect rx="0.0" ry="0.0" x="157.0" y="857.5" width="46.0" height="46.0" class="key"/>
+<text x="180.0" y="880.5" class="tap">DEVELOP</text>
+<rect rx="0.0" ry="0.0" x="207.0" y="857.5" width="46.0" height="46.0" class="key"/>
+<text x="230.0" y="880.5" class="tap">LCTRL</text>
 <rect rx="0.0" ry="0.0" x="257.0" y="870.0" width="46.0" height="46.0" class="key"/>
-<text x="280.0" y="893.0" class="tap">SPACE</text>
+<text x="280.0" y="893.0" class="tap">LSHIFT</text>
 <rect rx="0.0" ry="0.0" x="307.0" y="895.0" width="46.0" height="46.0" class="key"/>
 <text x="330.0" y="918.0" class="tap">SPACE</text>
 <rect rx="0.0" ry="0.0" x="357.0" y="907.5" width="46.0" height="46.0" class="trans key"/>

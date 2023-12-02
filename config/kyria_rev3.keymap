@@ -236,7 +236,7 @@
             &kp ESC &accent_ht FR_AGRV FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T                                  &kp FR_Y &accent_ht FR_UGRV FR_U &kp FR_I &kp FR_O &kp FR_P &cust_ht FR_BSLS FR_SLSH
             &kp TAB &kp FR_Q &hrm_ht LALT FR_S &hrm_ht LSHIFT FR_D &hrm_ht LCTRL FR_F &kp FR_G             &kp FR_H &hrm_ht RCTRL FR_J &hrm_ht RSHIFT FR_K &hrm_ht LALT FR_L &kp FR_M &kp FR_COLN
             &td_caps &kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B &kp CAPS &none             &kp DEL &kp PRINTSCREEN &kp FR_N &kp FR_COMM &kp FR_SCLN &kp FR_DQUO &cust_ht FR_SCLN FR_DOT &cust_ht FR_QUES FR_EXLM
-            &sk LALT &sk LCTRL &skq LSHIFT &maj_space &nav_macro                               &mo SYMBOL &cust_mt FR BSPC &sk LCTRL &kp LGUI &tog_ht GAMING DEVELOP
+            &tog_ht GAMING AZERTY &sk LCTRL &skq LSHIFT &maj_space &nav_macro                               &mo SYMBOL &cust_mt FR BSPC &sk LCTRL &kp LGUI &tog_ht GAMING AZERTY
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
@@ -256,10 +256,10 @@
 
         GAMING_layer {
             bindings = <
-            &kp ESC &none &kp FR_A &kp FR_Z &kp FR_E &kp FR_R                                   &kp FR_Y &kp FR_U &kp FR_I &kp FR_O &kp FR_P &not_dead FR_CIRC
+            &kp ESC &kp FR_T &kp FR_A &kp FR_Z &kp FR_E &kp FR_R                                   &kp FR_Y &kp FR_U &kp FR_I &kp FR_O &kp FR_P &not_dead FR_CIRC
             &kp TAB &kp LSHIFT &kp FR_Q &kp FR_S &kp FR_D &kp FR_F              &kp FR_H &kp FR_J &kp FR_K &kp FR_L &kp FR_M &kp FR_HASH
-            &none &kp LCTRL &kp FR_W &kp FR_X &kp FR_C &kp FR_V &trans &trans             &kp DEL &kp PRINTSCREEN &kp FR_N &kp FR_COMM &kp FR_SCLN &td_quotes &kp FR_DOT &cust_ht FR_QUES FR_EXLM
-            &trans &trans &kp SPACE &kp SPACE &trans                              &trans &trans &trans &trans &to 0
+            &kp FR_T &kp LCTRL &kp FR_W &kp FR_X &kp FR_C &kp FR_V &trans &kp LALT             &kp DEL &kp PRINTSCREEN &kp FR_N &kp FR_COMM &kp FR_SCLN &td_quotes &kp FR_DOT &cust_ht FR_QUES FR_EXLM
+            &to 0 &kp LCTRL &kp LSHIFT &kp SPACE &trans                                   &trans &trans &trans &trans &to 0
             >;
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
         };
