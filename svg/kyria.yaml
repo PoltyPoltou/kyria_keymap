@@ -1,3 +1,4 @@
+layout: {qmk_keyboard: splitkb/kyria/rev1}
 layers:
   DEVELOP:
   - ESC
@@ -13,7 +14,7 @@ layers:
   - P
   - {t: /, h: \}
   - TAB
-  - Q
+  - {t: Q, h: LGUI}
   - {t: S, h: LALT}
   - {t: D, h: LSHIFT}
   - {t: F, h: LCTRL}
@@ -22,7 +23,7 @@ layers:
   - {t: J, h: RCTRL}
   - {t: K, h: RSHIFT}
   - {t: L, h: LALT}
-  - M
+  - {t: M, h: RGUI}
   - ':'
   - '&td_caps'
   - W
@@ -41,15 +42,15 @@ layers:
   - {t: ., h: ;}
   - {t: '!', h: '?'}
   - {t: AZERTY, h: GAMING}
-  - {t: LCTRL, h: sticky}
+  - ''
   - {t: LSHIFT, h: sticky}
   - {t: SPACE, s: _}
   - '&nav_macro'
   - SYMBOL
   - {t: BSPC, h: FR}
-  - {t: LCTRL, h: sticky}
-  - LGUI
-  - {t: AZERTY, h: GAMING}
+  - ''
+  - ''
+  - SYS
   AZERTY:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,7 +143,7 @@ layers:
   - '&td_quotes'
   - .
   - {t: '!', h: '?'}
-  - DEVELOP
+  - {t: DEVELOP, h: toggle}
   - LCTRL
   - LSHIFT
   - SPACE
@@ -151,9 +152,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DEVELOP
+  - {t: DEVELOP, h: toggle}
   SYMBOL:
-  - KEYPAD
+  - {t: KEYPAD, h: toggle}
   - '@'
   - <
   - (
@@ -357,7 +358,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   KEYPAD:
-  - KEYPAD
+  - {t: KEYPAD, h: toggle}
   - ''
   - ''
   - ''
@@ -413,8 +414,8 @@ layers:
   - ''
   - ''
   - ''
-  - BT 0
-  - BT 4
+  - {t: BT, h: '0'}
+  - {t: BT, h: '4'}
   - ''
   - ''
   - ''
@@ -425,8 +426,8 @@ layers:
   - ''
   - ''
   - ''
-  - BT 1
-  - BT 5
+  - {t: BT, h: '1'}
+  - {t: BT, h: '5'}
   - ''
   - ''
   - ''
@@ -437,18 +438,18 @@ layers:
   - ''
   - ''
   - ''
-  - BT 2
+  - {t: BT, h: '2'}
   - {t: ▽, type: trans}
   - '&bootloader'
   - '&bootloader'
   - {t: ▽, type: trans}
-  - BT 6
+  - {t: BT, h: '6'}
   - ''
   - ''
   - ''
   - ''
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -459,15 +460,15 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
 combos:
-- p: [40, 49]
-  k: {t: SYS, h: sticky}
+- p: [26, 28]
+  k: LC(FR X)
   l: [AZERTY, DEVELOP]
-- p: [0, 1, 2]
-  k: BT 0
+- p: [26, 27]
+  k: LC(FR C)
   l: [AZERTY, DEVELOP]
-- p: [12, 13, 14]
-  k: BT 1
+- p: [27, 28]
+  k: LC(FR V)
   l: [AZERTY, DEVELOP]
-- p: [24, 25, 26]
-  k: BT 2
+- p: [3, 4]
+  k: ENTER
   l: [AZERTY, DEVELOP]
